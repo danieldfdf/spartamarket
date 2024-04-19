@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% load static %}
+
+    {% block content %}
+    <h1>index</h1>
+
+    <img src="{% static 'articles/jungsak.png'%}">
+
+    <ul>
+    <li><a href = "{% url 'articles:data_throw'%}">throw로 가기</a></li>
+    <li><a href = "{% url 'users:users'%}">users로 가기</a></li>
+    <li><a href = "{% url 'articles:articles'%}">articles로 가기</a></li>
+    </ul>
+    {% endblock content %}

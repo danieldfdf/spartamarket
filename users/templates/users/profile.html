@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <h1>{{ username }} 의 프로필 페이지 </h1>
+
+    <div>
+    <h3>username: {{ username }} </h3>
+    
+        <form action="{% url 'users:follow' member.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="팔로우">
+        </form>
+    </div>
+
+
+    <a href = "/index/">홈으로 가기</a>
+{% endblock content %}

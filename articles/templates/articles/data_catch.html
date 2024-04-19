@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{%block content%}
+    <h1>data catch</h1>
+
+    <h3>cureent data</h3>
+    <p>current data is : {{ message }}</p>
+
+    <a href = "{% url 'articles:data_throw'%}">데이터 던지러 가기</a>
+
+{%endblock content%}
